@@ -1,15 +1,19 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>SPA Page</title>
-    <script>
-      // 重定向到你的 SPA 页面
-      const pathname = window.location.pathname
-      window.location.href ='/tiny-react'
-      window.location.replace(pathname)
-    </script>
-  </head>
-  <body>
-    <!-- 可以添加一些加载提示或其他内容 -->
-  </body>
+
+<head>
+  <title>SPA Page</title>
+  <script>
+    var path = window.location.pathname;
+    if (path !== '/' && path !== '/index.html') {
+      window.history.pushState(null, null, '/tiny-react');
+      window.location.href = path;
+    }
+  </script>
+</head>
+
+<body>
+  <!-- 可以添加一些加载提示或其他内容 -->
+</body>
+
 </html>
