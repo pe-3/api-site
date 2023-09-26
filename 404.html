@@ -4,8 +4,9 @@
     <title>SPA Page</title>
     <script>
       // 重定向到你的 SPA 页面
-      console.log(window.location)
-      window.location.href = '/tiny-react';
+      const pathname = window.location.pathname
+      window.location.href ='/tiny-react'
+      window.location.replace(pathname)
     </script>
   </head>
   <body>
