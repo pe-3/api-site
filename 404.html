@@ -1,19 +1,20 @@
-<!DOCTYPE html>
-<html>
+<!doctype html>
+<html lang=zh>
 
 <head>
-  <title>SPA Page</title>
-  <script>
-    var path = window.location.pathname;
-    if (path !== '/' && path !== '/index.html') {
-      window.location.href = '/tiny-react';
-      window.history.pushState(null, null, path);
-    }
-  </script>
+    <meta charset=UTF-8 />
+    <link rel=icon href=/tiny-react/favicon.ico />
+    <meta name=viewport content="width=device-width,initial-scale=1" />
+    <title>OpenTiny - TinyVue</title>
+    <script type=module crossorigin src=/tiny-react/assets/index-8a90f40c.js></script>
+    <link rel=stylesheet href=/tiny-react/assets/index-3a438ea4.css>
 </head>
 
-<body>
-  <!-- 可以添加一些加载提示或其他内容 -->
+<body class=of-hidden>
+    <div id=header></div><app-root></app-root>
+    <div id=app class="wp100 hp100 pt60"></div>
+    <script id=tinyui-design-common
+        src=https://res.hc-cdn.com/tinyui-design-common/1.0.5.20230106163838/tinyui-design-common.min.js></script>
 </body>
 
 </html>
